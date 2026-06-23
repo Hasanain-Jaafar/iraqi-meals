@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pkill -f \"next dev\")",
+      "Bash(pkill -f \"next-server\")",
+      "Bash(node -e \"const m=require\\('./src/data/meals.json'\\); console.log\\(m.length\\); console.log\\(JSON.stringify\\(m[0],null,2\\)\\); console.log\\(JSON.stringify\\(m[26],null,2\\)\\);\")",
+      "Bash(node -e \"const m=require\\('./iraqi_meals.json'\\); console.log\\(Object.keys\\(m[0]\\)\\); console.log\\(m[0].imgUrl || m[0]['صورة'] || JSON.stringify\\(m[0]\\)\\);\")",
+      "Bash(node -e ' *)"
+    ]
+  }
+}
