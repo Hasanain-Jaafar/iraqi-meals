@@ -36,6 +36,17 @@ yarn-error.log*
 # vercel
 .vercel
 
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# editor / agent tooling
+.claude
+.vscode
+
+# project docs (local-only)
+CLAUDE.md
+AGENTS.md
+design_template_.png
+design.md
