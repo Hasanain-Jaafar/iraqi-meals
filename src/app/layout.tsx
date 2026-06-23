@@ -15,11 +15,13 @@ const zain = Zain({
 })
 
 export const metadata: Metadata = {
-  title: "مطبخنا — أكلات بيتية عراقية",
+  title: "مطبخنا",
   description:
     "وصفات عراقية بيتية أصيلة، بطريقة سهلة وواضحة لكل أفراد العائلة.",
   icons: {
     icon: "/logo.svg",
+    shortcut: "/logo.svg",
+    apple: "/logo.svg",
   },
 }
 
@@ -30,13 +32,7 @@ export const viewport: Viewport = {
   themeColor: "#f5f5f7",
 }
 
-/**
- * Pre-hydration inline script — prevents a flash of the wrong accent color
- * on first paint. Must run via next/script's beforeInteractive-equivalent:
- * a plain inline <script> in the <head>, BEFORE AccentColorProvider mounts.
- * See design.md §3.3. Do not move this into a useEffect — that defeats
- * the entire purpose (it would run after first paint, not before it).
- */
+
 const ACCENT_INIT_SCRIPT = `
 (function() {
   try {
