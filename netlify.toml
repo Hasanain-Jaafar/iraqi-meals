@@ -2,6 +2,12 @@
   command = "npm run build"
   publish = "out"
 
+[build.environment]
+  # This is a pure static export (output: "export", no server runtime) —
+  # the auto-attached Next.js Runtime plugin assumes a hybrid/server build
+  # and fails looking for .next instead of out/. Skip it.
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
